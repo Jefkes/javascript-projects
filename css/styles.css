@@ -91,13 +91,8 @@ nav li{
     border-top: 3px solid #FFFFFF;
     border-left: 3px solid #FFFFFF;
     border-right: 3px solid #FFFFFF;
-    opacity: 0.95;
+    opacity: 1;
     cursor: pointer;
-    }
-
-nav li a{
-    text-decoration: none;
-    color: #00FFFF;
     }
 
 /*verander de achtergrondkleur bij hoveren over navigatiebalk*/
@@ -107,9 +102,24 @@ nav ul li:hover{
     border-top-right-radius: 15px;
     }
 
+/*standaard tekstkleur van de hoofdbalk*/
+.hoofd {
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+}
+
+.subnav {
+    text-decoration: none;
+}
+
 /*verandert tekstkleur van de hoofdbalk bij hoveren over navigatiebalk*/
 nav ul li:hover .hoofd{
-    color:black;
+    color:black; 
+}
+/*alle styling (bv. van bootstrap verwijderen op tekst bij hover)*/
+a:hover {
+    text-decoration: none;
 }
 
 /*verberg de subnavigatie*/
@@ -211,7 +221,7 @@ nav ul li ul li:hover a{
 
 .opleiding{
     padding-left: 400px;
-    Padding-top: 50px;
+    Padding-top: 100px;
     color: #FFFFFF;
 }
 .werkervaring{
@@ -317,4 +327,23 @@ textarea {
 /*meer plaats tussen afbeeldingen in tabel*/
 #linktable tr td{
     padding: 20px 40px;
+}
+
+.machine {
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    padding: 10px; 
+    padding-top: 40px; 
+    border-radius: 10px;
+
+}
+
+.custom {
+    width: 35px; 
+    height: 35px;
 }
