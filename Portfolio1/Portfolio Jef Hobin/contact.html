@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Boontje</title>
+        <link rel="stylesheet"  href="css/styles.css"/>
+        <link rel="icon" href="img/beans.png"/>
+    </head>
+    <body>
+        <!--headerelement voor homebutton en titel op de pagina-->
+        <div class=fixedview>
+        <header class="homepage">
+            <a href="index.html" target="_self"><img class="homebutton" src="img/home-5-48.png" width="40" height="40"></img></a>
+            <h1>Contact</h1>
+        </header>
+        <!--navigatiebalk met dropdownmenu-->
+        <nav>
+            <ul>
+                <li><a class="hoofd">Varia</a>
+                    <ul>
+                        <li><a href= "muziek.html" target="_self">muziek</a></li>
+                        <li><a href= "links.html" target="_self">links</a></li>
+                    </ul>
+                </li>
+                <li><a class="hoofd">Portfolio</a>
+                    <ul>
+                        <li><a href= "geogebra.html" target="_self">GeoGebra</a></li>
+                        <li><a href= "eerstegraad.html" target="_self">Eerste jaar</a></li>
+                        <li><a href= "tweedegraad.html" target="_self">Tweede jaar</a></li>
+                    </ul>
+                </li>
+                <li> <a class="hoofd">CV</a>
+                    <ul>
+                        <li><a href= "opleiding.html" target="_self">Opleiding</a></li>
+                        <li><a href= "werkervaring.html" target="_self">Werkervaring</a></li>
+                        <li><a href= "contact.html" target="_self">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        </div>
+        <div class="rest">
+            <form action="post-demo.php" method="POST">
+                <fieldset>
+                    <legend>Contacteer me!</legend>
+                    <label for=voornaam>Voornaam</label>
+                    <input type="text" name="eerstenaam" id="voornaam">
+                    <br>
+                    <label for=achternaam>Achternaam</label>
+                    <input type="text" name="laatstenaam" id="achternaam">
+                    <br>
+                    <label for=email>e-mail</label>
+                    <input type="text" name="e-mail" id="email" cols="30" rows="10">
+                    <br><br>
+                    <label class="stelvraag" for=vraag>Stel hier uw vraag.</label>
+                    <br>
+                    <textarea type="text" name="question" id="vraag"></textarea>
+                    <br><br>
+                    <label class="stelvraag" for="newsletter">Wens je de nieuwsbrief te ontvangen?</label>
+                    <input type="checkbox" name="nieuwsbrief" id="newsletter" value="ja">
+                </fieldset>
+                <br>
+                <input id="verstuurknop" type="submit" value="Verstuur">
+            </form>
+        </div>
+    </body>
