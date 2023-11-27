@@ -4,7 +4,8 @@
     width: 99%;
     position: fixed;
     z-index: 1;
-    background-color: black;
+    background-color: #1b0606;
+    color: white; 
 }
 /*Dit is om de rest van de elementen te verbergen achter de navigatiebalk bij scrollen*/
 .rest{
@@ -31,6 +32,8 @@ hr{
     cursor: pointer;
     padding-left: 20px;
     padding-top: 10px;
+    width: 60px;
+    height: 50px;
 }
 
 nav{
@@ -39,10 +42,10 @@ nav{
 /*achtergrond en lettertype van de website*/
 body{
     font-family: Arial;
-    background-color: #000000;
+    background-color: #1b0606;
 }
 /*Titel bovenaan de pagina naast de homebutton*/
-h1{
+h1 {
     font-size:50px;
     color: #FFFFFF;
     margin: 0px;
