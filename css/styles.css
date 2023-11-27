@@ -339,7 +339,7 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: antiquewhite;
+    background-color: rgb(123, 229, 196);
     padding: 10px; 
     padding-top: 40px; 
     border-radius: 10px;

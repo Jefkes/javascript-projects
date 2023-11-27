@@ -19,14 +19,20 @@ function isNumber(value) {
 }
 
 function solve() {
-    let inputField = document.getElementById('result'); 
-    let x = inputField.value; 
-    let y = eval(x); 
-    if (isNumber(y)&&!isNaN(y)) {
-        inputField.value = y; 
+    let x = document.getElementById('result');
+
+    try {
+        let result = eval(x.value);
+
+        if (typeof result === 'number' && !isNaN(result)) {
+            x.value = result;
+        } 
+        
+        else {
+            x.value = 'error';
+        }
+    } catch (error) {
+        // Handle the error (e.g., syntax error in the expression)
+        x.value = 'invalid expression';
     }
-    else {
-    inputField.value = 'error'; 
-    }
-    
 }
