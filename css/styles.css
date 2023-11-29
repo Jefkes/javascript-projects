@@ -358,6 +358,8 @@ textarea {
     position: relative;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
  .memory-card:active {
@@ -369,12 +371,17 @@ textarea {
     cursor: pointer;
   }
 
+  .memory-card.flip {
+    transform: rotateY(180deg); 
+  }
+
 .memory-game {
     width: 500px;
     height: 500px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
   }
 
   .front-face,
@@ -385,4 +392,10 @@ textarea {
   position: absolute;
   border-radius: 5px;
   background: #1C7CCC;
+  backface-visibility: hidden;
 }
+
+.front-face {
+    transform: rotateY(180deg);
+    padding: 5px; 
+  }
