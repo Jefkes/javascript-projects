@@ -20,13 +20,46 @@
         <div class="card">
             <div class="search">
                 <input type="text" placeholder="Geef een stad in">
-                <button><img src="img/search.png" width="20" height="20"></button>
+                <button class="btn btn-light extra"><img src="img/search.png" width = "30px" height = "30 px"></button>
+            </div>
+            <div class = "weather">
+                <img class="weather-icon" src = "img/sun.png">
+                <h2 class = "temp">22°C</h2>
+                <h3 class = "city">Mechelen</h3>
+                <div class="details">
+                    <div class="col">
+                        <img src="img/water-drop.png" width="30px">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p class="subtekst">neerslagkans</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="img/wind.png" width="30px">
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p class="subtekst">windsnelheid</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="opleiding">
-     
         </div>
-        </div>
+        <script>
+
+            const apiKey = "4c529e2e0f8a02e805dfe8d8c2e8f7b7"; 
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Mechelen&units=metric"; 
+
+            async function checkWeather()  {
+                const response = await fetch(apiUrl+'&appid=${apiKey}'); 
+                var data = await response.json(); 
+
+                console.log(data); 
+            }
+
+            checkWeather(); 
+
+        </script>
 
      </body>
         

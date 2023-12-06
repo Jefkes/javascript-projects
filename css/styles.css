@@ -155,11 +155,85 @@ p{
     line-height:20px;
     color:#FFFFFF;
     font-weight:300;
-    width:900px;
     padding-top: 40px;
 }
 
-/*pagina 3: *Contactformulier*/
+/*pagina 2: weer*/
+
+.card {
+    width: 80%; 
+    max-width: 430px;
+    background: linear-gradient(135deg,#00feba,#5b538a); 
+    color: #fff; 
+    padding: 40px; 
+    margin: 180px auto; 
+    border-radius: 20px; 
+    text-align: center;
+}
+
+.search {
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border-radius: 30px;
+    border: 0; 
+    flex: 1; 
+    margin-right: 20px; 
+    height: 40px; 
+    padding: 10px; 
+}
+
+.extra {
+    border-radius: 30px; 
+}
+
+.weather {
+    display: block; 
+    align-items: center; 
+}
+
+.weather-icon {
+    width: 70px; 
+    margin: 30px 20px 20px 20px; 
+}
+
+.details {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0px 20px;
+    margin-top: 20px; 
+}
+
+.col {
+    display: flex; 
+    align-items: center; 
+    text-align: left; 
+}
+
+.col img {
+    width: 40px; 
+    margin-right: 10px; 
+}
+
+.subtekst {
+    font-size: 10px; 
+    margin: -5px; 
+    padding: 5px; 
+}
+
+.humidity, .wind {
+    font-size: 20px; 
+    padding: 5px; 
+    margin: -5px; 
+}
+
+
+/*pagina 3: Contactformulier*/
 
 fieldset {
     border-width: 1px;
