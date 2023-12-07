@@ -19,25 +19,25 @@
         <div class=rest>
         <div class="card">
             <div class="search">
-                <input type="text" placeholder="Geef een stad in">
-                <button class="btn btn-light extra"><img src="img/search.png" width = "30px" height = "30 px"></button>
+                <input id="cityname" type="text" placeholder="Geef een stad in">
+                <button class="btn btn-light extra" onclick="checkWeather()"><img src="img/search.png" width = "30px" height = "30 px"></button>
             </div>
             <div class = "weather">
                 <img class="weather-icon" src = "img/sun.png">
-                <h2 class = "temp">22°C</h2>
-                <h3 class = "city">Mechelen</h3>
+                <h2 class = "temp"></h2>
+                <h3 class = "city"></h3>
                 <div class="details">
                     <div class="col">
                         <img src="img/water-drop.png" width="30px">
                         <div>
-                            <p class="humidity">50%</p>
-                            <p class="subtekst">neerslagkans</p>
+                            <p class="humidity"></p>
+                            <p class="subtekst">vochtigheid</p>
                         </div>
                     </div>
                     <div class="col">
                         <img src="img/wind.png" width="30px">
                         <div>
-                            <p class="wind">15 km/h</p>
+                            <p class="wind"></p>
                             <p class="subtekst">windsnelheid</p>
                         </div>
                     </div>
@@ -48,16 +48,47 @@
         <script>
             /*api Key voor weer*/
             const apiKey = "4c529e2e0f8a02e805dfe8d8c2e8f7b7"; 
-            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Mechelen&units=metric"; 
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric"; 
+            
+            
 
             async function checkWeather()  {
-                const response = await fetch(apiUrl + `&appid=${apiKey}`); 
+                let city = document.getElementById('cityname').value; 
+                const response = await fetch(apiUrl + `&appid=${apiKey}` +`&q=${city}` ); 
                 var data = await response.json(); 
+                const weatherIcon = document.querySelector(".weather-icon");
 
                 console.log(data); 
+
+                document.querySelector(".city").innerHTML = data.name; 
+                document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + " °C"; 
+                document.querySelector(".humidity").innerHTML = data.main.humidity + "%"; 
+                document.querySelector(".wind").innerHTML = data.wind.speed + " km/h"; 
+
+                if (data.weather[0].main == "Clouds") {
+                        weatherIcon.src = "img/cloudy.png"; 
+                }
+
+                else if (data.weather[0].main == "Clear") {
+                        weatherIcon.src = "img/sun.png"; 
+                }
+
+                else if (data.weather[0].main == "Rain") {
+                        weatherIcon.src = "img/raining.png"; 
+                }
+
+                else if (data.weather[0].main == "Drizzle") {
+                        weatherIcon.src = "img/cloudy.png"; 
+                }
+
+                else if (data.weather[0].main == "Mist") {
+                        weatherIcon.src = "img/water-drop.png"; 
+                }
+
+                document.querySelector(".weather").style.display = "block"; 
             }
 
-            checkWeather(); 
+           
 
 
         </script>
