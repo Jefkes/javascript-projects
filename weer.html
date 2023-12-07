@@ -46,18 +46,19 @@
         </div>
         </div>
         <script>
-
+            /*api Key voor weer*/
             const apiKey = "4c529e2e0f8a02e805dfe8d8c2e8f7b7"; 
             const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Mechelen&units=metric"; 
 
             async function checkWeather()  {
-                const response = await fetch(apiUrl+'&appid=${apiKey}'); 
+                const response = await fetch(apiUrl + `&appid=${apiKey}`); 
                 var data = await response.json(); 
 
                 console.log(data); 
             }
 
             checkWeather(); 
+
 
         </script>
 
