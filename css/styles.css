@@ -158,7 +158,7 @@ p{
     padding-top: 40px;
 }
 
-/*pagina 2: weer*/
+/*pagina 1: weer*/
 
 .card {
     width: 80%; 
@@ -231,7 +231,18 @@ p{
     padding: 5px; 
     margin: -5px; 
 }
+/*pagina 2: strava*/ 
 
+.strava-data {
+    width: 80%; 
+    max-width: 430px;
+    background: linear-gradient(135deg,orange,black); 
+    color: #fff; 
+    padding: 40px; 
+    margin: 180px auto; 
+    border-radius: 50px; 
+    text-align: center;
+}
 
 /*pagina 3: Contactformulier*/
 
